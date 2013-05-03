@@ -15,7 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    (r'^add/$', 'fenxiao.agent.views.add'),
-    (r'^$', 'fenxiao.agent.views.index'),
+    url(r'^add/$', 'fenxiao.agent.views.add'),
+    url(r'^userLogin/$', 'fenxiao.agent.account.userLogin'),
+    url(r'^.*$', 'fenxiao.agent.views.index'),
 )
 urlpatterns += staticfiles_urlpatterns()

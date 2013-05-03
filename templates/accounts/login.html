@@ -31,7 +31,7 @@
             <h1>登录</h1>
             <div class="mws-login-lock"><i class="icon-lock"></i></div>
             <div id="mws-login-form">
-                <form id="login-form" class="mws-form" action="{% url userlogin %}" method="post">
+                <form id="login-form" class="mws-form" action="{% url 'fenxiao.agent.views.add' %}" method="post">
                     {% csrf_token %} 
                     {% if form.non_field_errors %}
                     <div id="mws-validate-error" class="mws-form-message error">{{form.non_field_errors}}</div> 
